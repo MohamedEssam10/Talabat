@@ -23,8 +23,6 @@ namespace Talabat.Services
         }
         public async Task<string> CreateTokenAsync(ApplicationUser User, UserManager<ApplicationUser> userManager)
         {
-
-            
             //Payload
             //1. Private Claims
 

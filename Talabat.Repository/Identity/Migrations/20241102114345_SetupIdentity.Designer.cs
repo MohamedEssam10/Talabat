@@ -34,7 +34,8 @@ namespace Talabat.Repository.Identity.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
+                        .IsConcurrency
+                        ()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")

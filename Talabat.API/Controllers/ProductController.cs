@@ -30,7 +30,7 @@ namespace Talabat.API.Controllers
 
         //[Authorize(AuthenticationSchemes = "Bearer")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-
+        [CachedAttribute(300)]
         [HttpGet]
         public async Task<ActionResult<Pagination<ProductToReturnDto>>> GetProducts([FromQuery]ProductSpecParams productSpecParams)
         {
@@ -68,9 +68,6 @@ namespace Talabat.API.Controllers
             var brands = await BrandRepo.GetAllAsync();
             return Ok(brands);
         }
-
-
-
 
         [HttpGet("categories")]
         public async Task<ActionResult<IReadOnlyList<Category>>> GetCategories()

@@ -18,7 +18,8 @@ namespace Talabat.Repository.Identity
                 builder.Entity<IdentityUserClaim<int>>().ToTable("UserClaims");
                 builder.Entity<IdentityUserLogin<int>>().ToTable("UserLogins");
                 builder.Entity<IdentityRoleClaim<int>>().ToTable("RoleClaims");
-                builder.Entity<IdentityUserToken<int>>().ToTable("UserTokens");
+                builder.Entity<IdentityUser
+                    <int>>().ToTable("UserTokens");
             }
         }
 }

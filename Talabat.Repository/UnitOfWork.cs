@@ -14,7 +14,7 @@ namespace Talabat.Repository
     public class UnitOfWork : IUnitOfWork
     {
         private readonly StoreDbContext DbContext;
-        private  Hashtable Repositories;
+        private Hashtable Repositories;
 
         public UnitOfWork(StoreDbContext DbContext)
         {

@@ -68,7 +68,7 @@ namespace Talabat.API.Controllers
             {
                 Email= user.Email,
                 DisplayName = user.DisplayName,
-                Token =await tokenService.CreateTokenAsync(user,userManager)
+                Token = await tokenService.CreateTokenAsync(user,userManager)
             });
 
         }

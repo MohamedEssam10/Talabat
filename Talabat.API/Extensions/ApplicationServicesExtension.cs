@@ -24,6 +24,8 @@ namespace Talabat.API.Extensions
             Services.AddScoped<IUnitOfWork,  UnitOfWork>();
             Services.AddScoped<IOrderServices, OrderServices>();
 
+            Services.AddSingleton<IResponseCacheServices>();
+            
             #region Error Handling
             Services.Configure<ApiBehaviorOptions>(options =>
             {
